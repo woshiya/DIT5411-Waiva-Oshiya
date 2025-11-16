@@ -5,9 +5,6 @@ Waiva Oshiya (220267123)
 A comprehensive deep learning project comparing three CNN architectures for recognizing 40 Chinese characters, achieving up to 98%+ accuracy through progressive architectural improvements.
 
 ![Project Status](https://img.shields.io/badge/Status-Complete-success)
-![Python](https://img.shields.io/badge/Python-3.8+-blue)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -271,8 +268,8 @@ Error analysis
 Computational efficiency comparison
 
 ---
-
-###Acknowledgments
+**
+###Acknowledgments**
 Dataset: Chinese character handwriting dataset
 Github link: https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset 
 Inspired by ResNet architecture (He et al., 2015)
