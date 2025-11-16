@@ -13,6 +13,7 @@ This is a comprehensive deep learning project comparing three CNN architectures 
 - [Dataset](#dataset)
 - [Models & Architecture](#models--architecture)
 - [Results](#results)
+- [Fair Test](#fair-test)
 - [Key Features](#key-features)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -90,8 +91,6 @@ Global Average Pooling
 Dense layers (512, 256, 40)
 Parameters: ~4.5M
 Training Time: ~8 minutes
-apache
-
 
 ---
 
@@ -119,7 +118,9 @@ apache
 ### Most Challenging Characters
 - Detailed per-character analysis available in notebook
 - Confusion matrix visualization for error analysis
-
+  
+--
+## Fair Test
 ### Ensuring Fair Model Comparison
 To guarantee a fair and scientific comparison between the three architectures, the following rigorous testing protocols were folllowed:
 - **Consistent Data Splitting Strategy**
