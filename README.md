@@ -268,8 +268,7 @@ Error analysis
 Computational efficiency comparison
 
 ---
-**
-###Acknowledgments**
+**Acknowledgments**
 Dataset: Chinese character handwriting dataset
 Github link: https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset 
 Inspired by ResNet architecture (He et al., 2015)
