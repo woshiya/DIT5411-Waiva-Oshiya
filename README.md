@@ -2,7 +2,7 @@ THEi-DIT5411-Machine-Learning-Assignment-Character-Recognition-Assignment
 Waiva Oshiya (220267123)
 # Chinese Character Recognition using Deep Learning CNNs
 
-This is a comprehensive deep learning project comparing three CNN architectures for recognizing 40 Chinese characters, achieving up to 98%+ accuracy through progressive architectural improvements.
+This is a comprehensive deep learning project comparing three CNN architectures for recognizing 40 Chinese characters, achieving up high accuracy through progressive architectural improvements.
 
 ![Project Status](https://img.shields.io/badge/Status-Complete-success)
 
@@ -120,6 +120,42 @@ apache
 - Detailed per-character analysis available in notebook
 - Confusion matrix visualization for error analysis
 
+### Ensuring Fair Model Comparison
+To guarantee a fair and scientific comparison between the three architectures, the following rigorous testing protocols were folllowed:
+- **Consistent Data Splitting Strategy**
+- Fixed Random Seed: All experiments used random_state=42 to ensure reproducibility. This means every model was trained and tested on exactly the same data splits.
+- Stratified Split: We employed stratified splitting to maintain balanced class distribution across training and testing sets. Each of the 40 character classes appears proportionally in both sets, preventing any model from having an advantage due to data imbalance.
+- **Data Split Ratio:**
+Training set: 80% (8,312 images after augmentation)
+Testing set: 20% (2,078 original images - no augmentation)
+- **Isolated Testing Set**
+Critical Rule: The testing set was completely isolated from the training process. No augmented versions of test images were used in training, ensuring models were evaluated on genuinely unseen data. 
+        Why This Matters: If we had augmented test images and included them in training, our models would have seen similar versions during training, artificially inflating accuracy scores. By          keeping the test set pristine (original images only), we measure true generalization capability.
+-**All three models were trained under identical conditions:**
+- Consistent Hyperparameters:
+  -Optimizer: Adam with default learning rate (0.001)
+    Loss function: Categorical Crossentropy
+    Batch size: 32
+    Maximum epochs: 50
+    Same Callbacks:
+- Early Stopping: Monitors validation loss with patience=5
+    ReduceLROnPlateau: Reduces learning rate when validation loss plateaus
+    These callbacks ensure each model trains optimally without overfitting
+    Identical Data Augmentation:
+- All models trained on the same augmented dataset (5x augmentation)
+    Same augmentation techniques: rotation (±15°), shifts (10%), zoom (10%), horizontal flip
+    No model received preferential data treatment
+    Standardized Evaluation Metrics
+    Primary Metric: Test accuracy on the isolated 2,078 test images
+- Secondary Metrics:
+    Test loss (categorical crossentropy)
+    Per-character accuracy breakdown
+    Confusion matrix analysis
+    Evaluation Protocol: Each model's final weights (best validation performance) were loaded and evaluated once on the test set to avoid any evaluation bias from multiple testing.
+- **Computational Fairness**
+    - Hardware: All models trained on Google Colab with same GPU allocation (Tesla T4)
+- No Manual Intervention: Training was fully automated - no manual hyperparameter tuning between models to favor any particular architecture
+Single Run Evaluation: Each model's reported accuracy is from a single training run with the fixed random seed, representing real-world deployment scenarios
 ---
 
 ##  Key Features
@@ -259,8 +295,9 @@ Potential Enhancements
  Different optimizers (SGD, RMSprop)
  Advanced augmentation (CutMix, MixUp)
 
+---
 ### Detailed Results
-##Training Metrics
+## Training Metrics
 Best Validation Accuracy: 98.XX%
 Final Test Accuracy: 98.XX%
 Training Stability: No overfitting detected
