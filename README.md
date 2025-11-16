@@ -217,8 +217,7 @@ Run
 prediction = model.predict(new_image)
 predicted_class = CLASS_NAMES[np.argmax(prediction)]
 confidence = np.max(prediction) * 100
-```bash
-
+```
 
 ---
 ### Project Structure
@@ -243,7 +242,7 @@ ML Tools: Scikit-learn
 Environment: Google Colab, Jupyter Notebook
 Version Control: Git, GitHub
 
-### Future Improvements
+## Future Improvements
 Potential Enhancements
  Add more Chinese characters (expand to 100+ classes)
  Implement transfer learning (VGG16, ResNet50)
