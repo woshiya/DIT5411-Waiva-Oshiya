@@ -130,7 +130,7 @@ Training set: 80% (8,312 images after augmentation)
 Testing set: 20% (2,078 original images - no augmentation)
 - **Isolated Testing Set**
 Critical Rule: The testing set was completely isolated from the training process. No augmented versions of test images were used in training, ensuring models were evaluated on genuinely unseen data. 
-       - Why This Matters: If we had augmented test images and included them in training, our models would have seen similar versions during training, artificially inflating accuracy scores. By          keeping the test set pristine (original images only), we measure true generalization capability.
+-- Why This Matters: If we had augmented test images and included them in training, our models would have seen similar versions during training, artificially inflating accuracy scores. By          keeping the test set pristine (original images only), we measure true generalization capability.
   
 -**All three models were trained under identical conditions:**
 - **Consistent Hyperparameters:**
