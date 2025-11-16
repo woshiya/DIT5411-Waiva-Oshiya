@@ -224,11 +224,17 @@ confidence = np.max(prediction) * 100
 
 chinese-character-recognition/
 │
+
 ├── Chinese_Character_Recognition.ipynb  # Main notebook
+
 ├── README.md                             # This file
+
 ├── requirements.txt                      # Dependencies
+
+
 │
 ├── data/                                 # (Optional)
+
 │   └── augmented_data.zip               # Augmented dataset
 
 ---
