@@ -274,7 +274,7 @@ chinese-character-recognition/
 
 
 │
-├── data/                                 # (Optional)
+├── data/                                 
 
 │   └── augmented_data.zip               # Augmented dataset
 
