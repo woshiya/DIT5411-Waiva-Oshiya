@@ -302,23 +302,23 @@ Potential Enhancements
 ---
 ### Detailed Results
 ## Training Metrics
-Best Validation Accuracy: 98.XX%
-Final Test Accuracy: 98.XX%
-Training Stability: No overfitting detected
-Convergence: Achieved in <30 epochs
-Per-Model Analysis
-Detailed breakdown available in the notebook including:
+- Best Validation Accuracy: 98.XX%
+- Final Test Accuracy: 98.XX%
+- Training Stability: No overfitting detected
+- Convergence: Achieved in <30 epochs
+- Per-Model Analysis
+- Detailed breakdown available in the notebook including:
 
 ## Learning curves (accuracy/loss)
-Confusion matrices
-Per-character performance heatmaps
-Error analysis
-Computational efficiency comparison
+- Confusion matrices
+- Per-character performance heatmaps
+- Error analysis
+- Computational efficiency comparison
 
 ---
 **Acknowledgments**
-Dataset: Chinese character handwriting dataset
-Github link: https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset 
-Inspired by ResNet architecture (He et al., 2015)
-Built using Google Colab's free GPU resources
-TensorFlow/Keras documentation and community
+- Dataset: Chinese character handwriting dataset
+- Github link: https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset 
+- Inspired by ResNet architecture (He et al., 2015)
+- Built using Google Colab's free GPU resources
+- TensorFlow/Keras documentation and community
