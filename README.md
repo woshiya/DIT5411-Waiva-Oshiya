@@ -130,32 +130,35 @@ Training set: 80% (8,312 images after augmentation)
 Testing set: 20% (2,078 original images - no augmentation)
 - **Isolated Testing Set**
 Critical Rule: The testing set was completely isolated from the training process. No augmented versions of test images were used in training, ensuring models were evaluated on genuinely unseen data. 
-        Why This Matters: If we had augmented test images and included them in training, our models would have seen similar versions during training, artificially inflating accuracy scores. By          keeping the test set pristine (original images only), we measure true generalization capability.
+       - Why This Matters: If we had augmented test images and included them in training, our models would have seen similar versions during training, artificially inflating accuracy scores. By          keeping the test set pristine (original images only), we measure true generalization capability.
+  
 -**All three models were trained under identical conditions:**
-- Consistent Hyperparameters:
+- **Consistent Hyperparameters:**
   -Optimizer: Adam with default learning rate (0.001)
-    Loss function: Categorical Crossentropy
-    Batch size: 32
-    Maximum epochs: 50
-    Same Callbacks:
-- Early Stopping: Monitors validation loss with patience=5
-    ReduceLROnPlateau: Reduces learning rate when validation loss plateaus
-    These callbacks ensure each model trains optimally without overfitting
-    Identical Data Augmentation:
+    - Loss function: Categorical Crossentropy
+    - Batch size: 32
+    - Maximum epochs: 50
+    - Same Callbacks:
+        - Early Stopping: Monitors validation loss with patience=5
+           - ReduceLROnPlateau: Reduces learning rate when validation loss plateaus
+           -  These callbacks ensure each model trains optimally without overfitting
+-**Identical Data Augmentation:**
 - All models trained on the same augmented dataset (5x augmentation)
-    Same augmentation techniques: rotation (±15°), shifts (10%), zoom (10%), horizontal flip
-    No model received preferential data treatment
-    Standardized Evaluation Metrics
-    Primary Metric: Test accuracy on the isolated 2,078 test images
+    - Same augmentation techniques: rotation (±15°), shifts (10%), zoom (10%), horizontal flip
+    - No model received preferential data treatment
+-**Standardized Evaluation Metrics**
+- Primary Metric: Test accuracy on the isolated 2,078 test images
 - Secondary Metrics:
-    Test loss (categorical crossentropy)
-    Per-character accuracy breakdown
-    Confusion matrix analysis
-    Evaluation Protocol: Each model's final weights (best validation performance) were loaded and evaluated once on the test set to avoid any evaluation bias from multiple testing.
+    - Test loss (categorical crossentropy)
+    - Per-character accuracy breakdown
+    - Confusion matrix analysis
+    
+- **Evaluation Protocol**: Each model's final weights (best validation performance) were loaded and evaluated once on the test set to avoid any evaluation bias from multiple testing.
+- 
 - **Computational Fairness**
     - Hardware: All models trained on Google Colab with same GPU allocation (Tesla T4)
-- No Manual Intervention: Training was fully automated - no manual hyperparameter tuning between models to favor any particular architecture
-Single Run Evaluation: Each model's reported accuracy is from a single training run with the fixed random seed, representing real-world deployment scenarios
+- **No Manual Intervention**:Training was fully automated - no manual hyperparameter tuning between models to favor any particular architecture
+- **Single Run Evaluation:** Each model's reported accuracy is from a single training run with the fixed random seed, representing real-world deployment scenarios
 ---
 
 ##  Key Features
