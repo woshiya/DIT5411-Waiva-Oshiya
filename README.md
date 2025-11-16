@@ -134,7 +134,8 @@ Critical Rule: The testing set was completely isolated from the training process
   
 -**All three models were trained under identical conditions:**
 - **Consistent Hyperparameters:**
-  -Optimizer: Adam with default learning rate (0.001)
+  -Optimizer:
+    - Adam with default learning rate (0.001)
     - Loss function: Categorical Crossentropy
     - Batch size: 32
     - Maximum epochs: 50
@@ -154,7 +155,7 @@ Critical Rule: The testing set was completely isolated from the training process
     - Confusion matrix analysis
     
 - **Evaluation Protocol**: Each model's final weights (best validation performance) were loaded and evaluated once on the test set to avoid any evaluation bias from multiple testing.
-- 
+  
 - **Computational Fairness**
     - Hardware: All models trained on Google Colab with same GPU allocation (Tesla T4)
 - **No Manual Intervention**:Training was fully automated - no manual hyperparameter tuning between models to favor any particular architecture
