@@ -2,7 +2,7 @@ THEi-DIT5411-Machine-Learning-Assignment-Character-Recognition-Assignment
 Waiva Oshiya (220267123)
 # Chinese Character Recognition using Deep Learning CNNs
 
-A comprehensive deep learning project comparing three CNN architectures for recognizing 40 Chinese characters, achieving up to 98%+ accuracy through progressive architectural improvements.
+This is a comprehensive deep learning project comparing three CNN architectures for recognizing 40 Chinese characters, achieving up to 98%+ accuracy through progressive architectural improvements.
 
 ![Project Status](https://img.shields.io/badge/Status-Complete-success)
 
@@ -216,7 +216,7 @@ Run
 # Code snippet for prediction
 prediction = model.predict(new_image)
 predicted_class = CLASS_NAMES[np.argmax(prediction)]
-confidence = np.max(prediction) * 100
+confidence = np.max(prediction) * 100 ```
 
 ---
 ### Project Structure
