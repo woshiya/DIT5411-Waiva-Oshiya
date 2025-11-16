@@ -221,8 +221,7 @@ prediction = model.predict(new_image)
 predicted_class = CLASS_NAMES[np.argmax(prediction)]
 confidence = np.max(prediction) * 100
 
-Project Structure
-basic
+##Project Structure
 
 chinese-character-recognition/
 │
@@ -233,7 +232,7 @@ chinese-character-recognition/
 ├── data/                                 # (Optional)
 │   └── augmented_data.zip               # Augmented dataset
 
- Technologies Used
+##Technologies Used
 Deep Learning: TensorFlow/Keras
 Data Processing: NumPy, Pandas
 Visualization: Matplotlib, Seaborn
@@ -242,22 +241,18 @@ ML Tools: Scikit-learn
 Environment: Google Colab, Jupyter Notebook
 Version Control: Git, GitHub
 
-Future Improvements
+##Future Improvements
 Potential Enhancements
  Add more Chinese characters (expand to 100+ classes)
  Implement transfer learning (VGG16, ResNet50)
- Create ensemble model combining all 3 architectures
- Deploy as web application (Flask/Streamlit)
- Add real-time camera input for live recognition
- Implement attention mechanisms
- Export models to TensorFlow Lite for mobile
- Add confusion pair analysis for similar characters
+
 Model Optimization
  Hyperparameter tuning with Grid Search
  Learning rate scheduling experiments
  Different optimizers (SGD, RMSprop)
  Advanced augmentation (CutMix, MixUp)
-Detailed Results
+
+##Detailed Results
 Training Metrics
 Best Validation Accuracy: 98.XX%
 Final Test Accuracy: 98.XX%
@@ -272,8 +267,9 @@ Per-character performance heatmaps
 Error analysis
 Computational efficiency comparison
 
-Acknowledgments
+## Acknowledgments
 Dataset: Chinese character handwriting dataset
+Github link: https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset 
 Inspired by ResNet architecture (He et al., 2015)
 Built using Google Colab's free GPU resources
 TensorFlow/Keras documentation and community
