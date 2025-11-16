@@ -216,7 +216,9 @@ Run
 # Code snippet for prediction
 prediction = model.predict(new_image)
 predicted_class = CLASS_NAMES[np.argmax(prediction)]
-confidence = np.max(prediction) * 100 ```
+confidence = np.max(prediction) * 100
+```bash
+
 
 ---
 ### Project Structure
